@@ -12,7 +12,7 @@
 | **Estilos** | CSS puro con custom properties |
 | **JavaScript** | Vanilla JS mínimo |
 | **Deploy destino** | cPanel — subir `dist/` a `public_html/` |
-| **Páginas** | 6 (Home, Servicios, Soluciones, Nosotros, Contacto, Privacidad) |
+| **Páginas** | 7 (Home, Servicios, Soluciones, Nosotros, Contacto, Privacidad, Gracias) |
 
 ---
 
@@ -115,7 +115,8 @@ ismoSoft/
         ├── soluciones.astro  # /soluciones
         ├── nosotros.astro    # /nosotros
         ├── contacto.astro    # /contacto
-        └── privacidad.astro  # /privacidad
+        ├── privacidad.astro  # /privacidad
+        └── gracias.astro     # /gracias  ← confirmación post-formulario
 ```
 
 ---
@@ -162,6 +163,7 @@ dist/
 ├── nosotros/index.html
 ├── contacto/index.html
 ├── privacidad/index.html
+├── gracias/index.html
 ├── icono.png
 ├── imagenfull.png
 └── _astro/
@@ -186,14 +188,32 @@ export default defineConfig({
 
 ## Formulario de contacto
 
-El formulario en `/contacto` actualmente tiene **validación frontend únicamente**.
-Para enviar los mensajes por email en producción se requiere una de estas opciones:
+El formulario en `/contacto` utiliza **[FormSubmit.co](https://formsubmit.co)** para el envío de emails. No requiere backend propio.
 
-| Opción | Implementación |
-|---|---|
-| **PHP mailer** | Crear `contact.php` en cPanel y apuntar `action` del form ahí |
-| **FormSubmit.co** | Servicio gratuito — cambiar `action` del form a `https://formsubmit.co/[email]` |
-| **cPanel Webmail forms** | Configurar desde el panel de cPanel |
+### Configuración activa
+
+```html
+<form action="https://formsubmit.co/contacto@ismosoft.com.ar" method="POST">
+  <input type="hidden" name="_subject"  value="Nueva consulta desde ismosoft.com.ar">
+  <input type="hidden" name="_captcha"  value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next"     value="https://ismosoft.com.ar/gracias/">
+</form>
+```
+
+### Flujo completo
+
+1. Usuario completa el form y envía
+2. JS valida campos obligatorios (nombre, institución, email, consulta)
+3. Si pasa validación → POST a FormSubmit
+4. FormSubmit envía el email a `contacto@ismosoft.com.ar`
+5. Redirige a `/gracias/` — página de confirmación propia del sitio
+
+### Nota de activación
+
+La primera vez que se recibe un envío, FormSubmit manda un email de verificación
+a `contacto@ismosoft.com.ar`. Hay que hacer click en el link para activar la casilla.
+Después de eso funciona automáticamente sin intervención.
 
 ---
 
@@ -206,9 +226,9 @@ listo como referencia para futuras ediciones o para versiones adicionales del si
 
 ## Pendientes / próximos pasos sugeridos
 
-- [ ] Reemplazar `[email@ismosoft.com]` por el email real en todo el sitio
-- [ ] Configurar el formulario de contacto con backend (PHP o servicio externo)
-- [ ] Configurar dominio en cPanel y subir `dist/`
+- [x] Reemplazar `[email@ismosoft.com]` por el email real → `contacto@ismosoft.com.ar`
+- [x] Configurar el formulario de contacto con FormSubmit.co
+- [x] Configurar dominio en cPanel y subir `dist/` → sitio live en https://ismosoft.com.ar
 - [ ] Agregar Google Analytics o similar si se requieren métricas
 - [ ] Configurar sitemap y meta Open Graph para redes sociales
 
