@@ -1,0 +1,178 @@
+---
+const year = new Date().getFullYear();
+
+const cols = [
+  {
+    label: 'Empresa',
+    links: [
+      { href: '/nosotros',   label: 'Nosotros' },
+      { href: '/servicios',  label: 'Servicios' },
+      { href: '/soluciones', label: 'Soluciones para municipios' },
+    ],
+  },
+  {
+    label: 'Legal',
+    links: [
+      { href: '/privacidad', label: 'Política de privacidad' },
+      { href: '/contacto',   label: 'Contacto' },
+    ],
+  },
+];
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+
+    <div class="footer__brand">
+      <a href="/" class="footer__logo" aria-label="ISMO Soft">
+        <img src="/imagenfull.png" alt="ISMO Soft" class="footer__logo-img" height="32" />
+      </a>
+      <p class="footer__tagline">Ingeniería de software para el sector público.</p>
+      <a href="mailto:[email@ismosoft.com]" class="footer__email">
+        [email@ismosoft.com]
+      </a>
+    </div>
+
+    <div class="footer__cols">
+      {cols.map(col => (
+        <div class="footer__col">
+          <p class="footer__col-label">{col.label}</p>
+          <nav>
+            {col.links.map(l => (
+              <a href={l.href} class="footer__link">{l.label}</a>
+            ))}
+          </nav>
+        </div>
+      ))}
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span class="footer__copy">© {year} ISMO Soft. Todos los derechos reservados.</span>
+      <span class="footer__region">Argentina</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: start;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Brand */
+  .footer__logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer__logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .footer__tagline {
+    color: var(--muted);
+    font-size: 13.5px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+  }
+
+  .footer__email {
+    font-size: 13.5px;
+    color: var(--accent);
+    font-weight: 500;
+    transition: opacity 0.15s;
+    text-decoration: none;
+  }
+
+  .footer__email:hover { opacity: 0.75; }
+
+  /* Cols */
+  .footer__cols {
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  .footer__col-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted-2);
+    margin-bottom: 0.875rem;
+  }
+
+  .footer__col nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer__link {
+    font-size: 13.5px;
+    color: var(--muted);
+    transition: color 0.15s;
+    text-decoration: none;
+  }
+
+  .footer__link:hover { color: var(--text); }
+
+  /* Bottom strip */
+  .footer__bottom {
+    border-top: 1px solid var(--border);
+    background: var(--surface-raised);
+  }
+
+  .footer__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+  }
+
+  .footer__copy,
+  .footer__region {
+    font-size: 12px;
+    color: var(--muted-2);
+  }
+
+  @media (max-width: 720px) {
+    .footer__inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .footer__cols {
+      gap: 2.5rem;
+    }
+
+    .footer__bottom-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+  }
+</style>

@@ -1,0 +1,270 @@
+---
+import Base from '../layouts/Base.astro';
+
+const topics = [
+  'Solicitud de propuesta técnica para un proyecto específico',
+  'Consultas sobre capacidades, metodología y experiencia',
+  'Consultas sobre desarrollo de aplicaciones móviles para el sector público',
+  'Consultas sobre integración con sistemas municipales existentes',
+];
+---
+
+<Base
+  title="Contacto"
+  description="Comuníquese con ISMO Soft para consultas técnicas e institucionales. Respondemos sin compromiso previo."
+>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero__eyebrow">
+        <span class="badge">Escribinos</span>
+      </div>
+      <h1 class="page-hero__title">Contacto</h1>
+      <p class="page-hero__sub">
+        Si su municipio o institución está evaluando una solución digital,
+        le invitamos a comunicarse con nosotros. Respondemos consultas técnicas
+        e institucionales con seriedad y sin compromiso previo.
+      </p>
+    </div>
+  </div>
+
+  <section class="section" style="border-top: 1px solid var(--border);">
+    <div class="container contact-grid">
+
+      <!-- Info panel -->
+      <aside class="info-panel">
+
+        <div class="info-block">
+          <p class="info-block__label">En qué podemos ayudarle</p>
+          <ul class="topic-list">
+            {topics.map(t => (
+              <li class="topic-item">
+                <span class="topic-dot" aria-hidden="true"></span>
+                {t}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="email-card">
+          <p class="email-card__label">Correo institucional</p>
+          <a href="mailto:[email@ismosoft.com]" class="email-card__addr">
+            [email@ismosoft.com]
+          </a>
+          <p class="email-card__note">Respuesta en 48 h hábiles.</p>
+        </div>
+
+        <p class="territory">
+          ISMO Soft opera de forma remota y atiende proyectos en todo el territorio argentino.
+        </p>
+
+      </aside>
+
+      <!-- Form -->
+      <div class="form-panel">
+        <h2 class="form-panel__title">Formulario de contacto</h2>
+
+        <form class="form" id="contactForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre y apellido <span class="req">*</span></label>
+              <input type="text" id="nombre" name="nombre"
+                placeholder="Juan García" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico <span class="req">*</span></label>
+              <input type="email" id="email" name="email"
+                placeholder="correo@municipio.gob.ar" required autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="institucion">Institución / Organismo <span class="req">*</span></label>
+              <input type="text" id="institucion" name="institucion"
+                placeholder="Municipalidad de…" required />
+            </div>
+            <div class="form-group">
+              <label for="cargo">Cargo</label>
+              <input type="text" id="cargo" name="cargo"
+                placeholder="Secretario/a de…" autocomplete="organization-title" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="consulta">Consulta <span class="req">*</span></label>
+            <textarea id="consulta" name="consulta"
+              placeholder="Describa brevemente el proyecto o la consulta…"
+              required></textarea>
+          </div>
+
+          <div id="formMsg" class="form-msg" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn--primary submit-btn">
+            Enviar consulta
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 7h12M8 2l5 5-5 5"/>
+            </svg>
+          </button>
+
+          <p class="form-note">Los campos marcados con <span class="req">*</span> son obligatorios.</p>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  /* Info panel */
+  .info-block__label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-2);
+    margin-bottom: 1rem;
+  }
+
+  .topic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .topic-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0.875rem 1.125rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .topic-item:last-child { border-bottom: none; }
+
+  .topic-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  /* Email card */
+  .email-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.375rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .email-card__label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-2);
+    margin-bottom: 0.5rem;
+  }
+
+  .email-card__addr {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-light);
+    margin-bottom: 0.4rem;
+    word-break: break-all;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .email-card__addr:hover { opacity: 0.75; }
+
+  .email-card__note {
+    font-size: 12px;
+    color: var(--muted-2);
+  }
+
+  .territory {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* Form panel */
+  .form-panel__title {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  .form-note {
+    font-size: 12px;
+    color: var(--muted-2);
+    margin-top: 0.5rem;
+  }
+
+  .req { color: var(--accent-light); }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  const msg  = document.getElementById('formMsg');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const get = (name: string) =>
+      (form.elements.namedItem(name) as HTMLInputElement | HTMLTextAreaElement)?.value.trim();
+
+    if (!get('nombre') || !get('institucion') || !get('email') || !get('consulta')) {
+      if (msg) {
+        msg.textContent = 'Por favor, complete todos los campos obligatorios.';
+        msg.className = 'form-msg err';
+      }
+      return;
+    }
+
+    if (msg) {
+      msg.textContent = 'Consulta recibida. Le responderemos dentro de las 48 horas hábiles.';
+      msg.className = 'form-msg ok';
+    }
+    form.reset();
+  });
+</script>

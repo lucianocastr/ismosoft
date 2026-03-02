@@ -1,0 +1,262 @@
+---
+import Base from '../layouts/Base.astro';
+
+const attributes = [
+  {
+    label: 'Precisión técnica',
+    text: 'Diseñamos arquitecturas que sostienen el crecimiento y facilitan el mantenimiento a largo plazo.',
+  },
+  {
+    label: 'Claridad funcional',
+    text: 'Antes de escribir una línea de código, definimos con precisión qué debe hacer el sistema y por qué.',
+  },
+  {
+    label: 'Responsabilidad sobre el resultado',
+    text: 'Nos comprometemos con el funcionamiento correcto del producto, no solo con su entrega.',
+  },
+  {
+    label: 'Comunicación directa',
+    text: 'Informamos con claridad sobre el estado del proyecto, las decisiones técnicas y los riesgos identificados.',
+  },
+];
+
+const criteria = [
+  'Separación de responsabilidades en la estructura del sistema',
+  'Código documentado y legible para equipos internos o futuros proveedores',
+  'Pruebas funcionales como parte del proceso de desarrollo, no como etapa posterior',
+  'Control de versiones y gestión de cambios estructurada',
+  'Procesos de despliegue reproducibles y documentados',
+];
+---
+
+<Base
+  title="Nosotros"
+  description="ISMO Soft es una empresa de ingeniería de software especializada en soluciones para el sector público. Conocé nuestra filosofía y enfoque de trabajo."
+>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero__eyebrow">
+        <span class="badge">La empresa</span>
+      </div>
+      <h1 class="page-hero__title">Sobre ISMO Soft</h1>
+      <p class="page-hero__sub">
+        Empresa de desarrollo de software especializada en soluciones para el
+        sector público y organizaciones que requieren tecnología construida con
+        rigor técnico y criterio profesional.
+      </p>
+    </div>
+  </div>
+
+  <!-- Statement -->
+  <section class="section" style="border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="statement-layout">
+        <div class="statement-left">
+          <span class="badge">Identidad</span>
+          <h2 style="margin-top: 1rem;">Qué nos define</h2>
+        </div>
+        <div class="statement-right">
+          <p class="statement-lead">
+            No somos una agencia digital de propósito general. Somos ingenieros
+            de software con foco específico en el desarrollo de plataformas que
+            resuelven problemas reales de gestión e información en el ámbito
+            gubernamental.
+          </p>
+          <div class="attr-grid">
+            {attributes.map(a => (
+              <div class="attr-item">
+                <p class="attr-item__label">{a.label}</p>
+                <p class="attr-item__text">{a.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filosofía -->
+  <section class="section" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="philosophy-layout">
+        <span class="badge">Filosofía</span>
+        <blockquote class="philosophy-quote">
+          Creemos que el software de calidad no es un producto de lujo sino una
+          condición necesaria para que las organizaciones funcionen bien.
+        </blockquote>
+        <p class="philosophy-body">
+          Cada decisión técnica tiene consecuencias operativas reales para quienes
+          usan nuestras soluciones. Por eso priorizamos la comprensión profunda del
+          problema sobre la velocidad de entrega. Un sistema bien diseñado desde el
+          inicio requiere menos correcciones, genera menos dependencia técnica y le
+          cuesta menos a la organización en el tiempo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arquitectura -->
+  <section class="section">
+    <div class="container">
+      <div class="arch-layout">
+        <div class="arch-left">
+          <span class="badge">Calidad técnica</span>
+          <h2 style="margin-top: 1rem; font-size: 1.4rem;">Enfoque en arquitectura y calidad</h2>
+          <p class="arch-text">
+            Aplicamos criterios de arquitectura de software en todos nuestros
+            proyectos, independientemente de su escala.
+          </p>
+        </div>
+        <ul class="criteria-list">
+          {criteria.map(c => (
+            <li class="criteria-item">
+              <span class="criteria-dot" aria-hidden="true"></span>
+              {c}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compromiso -->
+  <section class="cta-band">
+    <div class="container commitment-layout">
+      <div>
+        <span class="badge">Compromiso</span>
+        <h2 style="margin-top: 1rem; margin-bottom: 1rem; font-size: 1.35rem;">
+          Compromiso con el sector público
+        </h2>
+        <p class="commitment-text">
+          El sector público tiene particularidades que el software debe respetar:
+          restricciones presupuestarias, marcos normativos, múltiples usuarios internos
+          con distintos niveles de acceso y necesidad de trazabilidad. ISMO Soft conoce
+          estas condiciones y las incorpora desde el diseño, no como adaptaciones posteriores.
+        </p>
+      </div>
+      <a href="/soluciones" class="btn btn--ghost commitment-btn">
+        Ver soluciones para municipios
+      </a>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .statement-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .statement-lead {
+    color: var(--text-2);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .philosophy-layout {
+    max-width: 760px;
+  }
+
+  .philosophy-quote {
+    font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.45;
+    color: var(--text);
+    border-left: 2px solid var(--accent);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0 1.75rem;
+  }
+
+  .philosophy-body {
+    color: var(--muted);
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+
+  .arch-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .arch-text {
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.75;
+    margin-top: 0.75rem;
+  }
+
+  /* Criteria list */
+  .criteria-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .criteria-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.6;
+    transition: background 0.2s;
+  }
+
+  .criteria-item:last-child { border-bottom: none; }
+  .criteria-item:hover { background: var(--surface-raised); }
+
+  .criteria-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  /* Commitment */
+  .commitment-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+  }
+
+  .commitment-text {
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.8;
+    max-width: 62ch;
+  }
+
+  .commitment-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 900px) {
+    .statement-layout,
+    .arch-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .commitment-layout {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

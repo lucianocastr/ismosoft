@@ -1,0 +1,287 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Política de Privacidad"
+  description="Política de privacidad de ISMO Soft. Información sobre recopilación, uso y protección de datos personales en nuestras aplicaciones móviles."
+>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero__eyebrow">
+        <span class="badge">Legal</span>
+      </div>
+      <h1 class="page-hero__title">Política de Privacidad</h1>
+      <p class="page-hero__sub">Última actualización: [fecha de publicación]</p>
+    </div>
+  </div>
+
+  <section class="section" style="border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="privacy-layout">
+
+        <!-- Tabla de contenidos -->
+        <nav class="toc" aria-label="Índice">
+          <p class="toc__label">Contenidos</p>
+          <ol class="toc__list">
+            {[
+              'Identificación del responsable',
+              'Aplicación de esta política',
+              'Información que recopilamos',
+              'Finalidad del tratamiento',
+              'Compartición con terceros',
+              'Almacenamiento y seguridad',
+              'Conservación de los datos',
+              'Derechos del usuario',
+              'Servicios de terceros',
+              'Privacidad de menores',
+              'Cambios en esta política',
+              'Contacto',
+            ].map((item, i) => (
+              <li>
+                <a href={`#s${i + 1}`} class="toc__link">
+                  <span class="toc__num">{String(i + 1).padStart(2, '0')}</span>
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+
+        <!-- Contenido -->
+        <article class="prose">
+          <p>
+            Esta Política de Privacidad describe cómo ISMO Soft ("la empresa", "nosotros")
+            recopila, utiliza, almacena y protege la información personal de los usuarios de
+            las aplicaciones móviles desarrolladas y publicadas por ISMO Soft.
+          </p>
+          <p>
+            Al utilizar cualquiera de nuestras aplicaciones, el usuario acepta las prácticas
+            descritas en este documento.
+          </p>
+
+          <h2 id="s1">1. Identificación del responsable</h2>
+          <p><strong>Empresa:</strong> ISMO Soft</p>
+          <p><strong>Correo de contacto para privacidad:</strong> <a href="mailto:[email@ismosoft.com]">[email@ismosoft.com]</a></p>
+          <p><strong>País de operación:</strong> Argentina</p>
+
+          <h2 id="s2">2. Aplicación de esta política</h2>
+          <p>
+            Esta política aplica a todas las aplicaciones móviles publicadas por ISMO Soft en
+            Google Play Store y Apple App Store, así como a los servicios digitales asociados
+            a dichas aplicaciones (APIs, paneles de administración web, sistemas de notificaciones).
+          </p>
+
+          <h2 id="s3">3. Información que recopilamos</h2>
+          <p>Dependiendo de la aplicación específica, podemos recopilar los siguientes tipos de información:</p>
+
+          <h3>3.1 Información proporcionada por el usuario</h3>
+          <ul>
+            <li>Nombre y datos de contacto (cuando el usuario se registra o envía un formulario)</li>
+            <li>Correo electrónico (para autenticación o comunicaciones)</li>
+            <li>Preferencias de contenido seleccionadas dentro de la app</li>
+          </ul>
+
+          <h3>3.2 Información recopilada de forma automática</h3>
+          <ul>
+            <li>Datos de uso de la aplicación (secciones visitadas, funciones utilizadas, tiempo de sesión)</li>
+            <li>Información técnica del dispositivo (tipo de dispositivo, versión del sistema operativo, idioma configurado)</li>
+            <li>Dirección IP (registrada por los servidores durante solicitudes de red)</li>
+            <li>Identificadores de dispositivo anónimos (cuando se utilizan servicios de análisis o notificaciones push)</li>
+          </ul>
+
+          <h3>3.3 Datos de ubicación</h3>
+          <p>
+            Algunas aplicaciones pueden solicitar acceso a la ubicación geográfica del dispositivo
+            para ofrecer contenido o servicios cercanos al usuario. En todos los casos, este acceso
+            es <strong>opcional</strong> y el usuario puede negarlo o revocarlo desde la configuración
+            del sistema operativo sin que esto afecte el acceso a las funcionalidades principales.
+          </p>
+          <p>No almacenamos datos de ubicación de forma persistente sin consentimiento explícito del usuario.</p>
+
+          <h2 id="s4">4. Finalidad del tratamiento de datos</h2>
+          <p>Los datos recopilados se utilizan exclusivamente para los siguientes fines:</p>
+          <ul>
+            <li>Proveer las funcionalidades de la aplicación</li>
+            <li>Mejorar la experiencia de uso mediante análisis de comportamiento agregado y anónimo</li>
+            <li>Enviar notificaciones relevantes (si el usuario las habilitó)</li>
+            <li>Responder consultas enviadas a través de formularios de contacto</li>
+            <li>Cumplir obligaciones legales o requerimientos de organismos competentes</li>
+          </ul>
+          <p>No utilizamos los datos personales de los usuarios con fines comerciales, publicitarios ni para la venta a terceros.</p>
+
+          <h2 id="s5">5. Compartición de información con terceros</h2>
+          <p>ISMO Soft no vende, alquila ni transfiere información personal a terceros con fines propios.</p>
+          <p>Podemos compartir información con terceros únicamente en los siguientes casos:</p>
+          <ul>
+            <li><strong>Proveedores de servicios técnicos:</strong> plataformas de alojamiento (hosting), servicios de análisis de uso y servicios de envío de notificaciones push. Estos proveedores actúan bajo instrucción nuestra y están sujetos a sus propias políticas de privacidad.</li>
+            <li><strong>Requerimientos legales:</strong> cuando una autoridad competente lo solicite en el marco de la legislación argentina vigente.</li>
+            <li><strong>Municipalidades clientes:</strong> en aplicaciones desarrolladas para un municipio específico, los datos operativos pueden ser accedidos por el organismo contratante en el marco del contrato de prestación de servicios.</li>
+          </ul>
+
+          <h2 id="s6">6. Almacenamiento y seguridad de los datos</h2>
+          <p>Los datos son almacenados en servidores con medidas de seguridad técnicas y organizativas adecuadas para prevenir accesos no autorizados, pérdida o alteración de la información. Aplicamos:</p>
+          <ul>
+            <li>Transmisión de datos cifrada mediante HTTPS/TLS</li>
+            <li>Acceso restringido a bases de datos mediante control de permisos</li>
+            <li>Contraseñas y credenciales almacenadas con hash criptográfico</li>
+          </ul>
+          <p>En caso de detectar una brecha de seguridad que afecte datos personales, notificaremos a los usuarios afectados en los plazos que establezca la normativa vigente.</p>
+
+          <h2 id="s7">7. Conservación de los datos</h2>
+          <p>
+            Los datos personales se conservan mientras sea necesario para cumplir los fines
+            descritos en esta política o mientras el usuario mantenga una cuenta activa en la aplicación.
+          </p>
+          <p>
+            Una vez que el usuario solicita la eliminación de sus datos o cierra su cuenta,
+            procedemos a la eliminación o anonimización de su información personal en un plazo
+            razonable, salvo que la conservación sea requerida por obligaciones legales.
+          </p>
+
+          <h2 id="s8">8. Derechos del usuario</h2>
+          <p>
+            De conformidad con la Ley 25.326 de Protección de los Datos Personales de la
+            República Argentina, el usuario tiene derecho a:
+          </p>
+          <ul>
+            <li><strong>Acceder</strong> a los datos personales que ISMO Soft conserva sobre él</li>
+            <li><strong>Rectificar</strong> datos inexactos o incompletos</li>
+            <li><strong>Solicitar la eliminación</strong> de sus datos personales (derecho al olvido), salvo obligaciones legales</li>
+            <li><strong>Oponerse</strong> al tratamiento de sus datos para determinadas finalidades</li>
+            <li><strong>Revocar el consentimiento</strong> otorgado, sin que ello afecte la licitud del tratamiento previo</li>
+          </ul>
+          <p>Para ejercer cualquiera de estos derechos: <strong><a href="mailto:[email@ismosoft.com]">[email@ismosoft.com]</a></strong></p>
+          <p>Respondemos solicitudes en un plazo máximo de 30 días hábiles desde la recepción.</p>
+
+          <h2 id="s9">9. Uso de servicios de terceros</h2>
+          <p>
+            Nuestras aplicaciones pueden integrar servicios técnicos provistos por terceros para
+            funciones como alojamiento de datos, análisis de uso, autenticación o envío de
+            notificaciones. Cada uno de estos proveedores opera bajo su propia política de privacidad.
+          </p>
+          <p>
+            Cuando una aplicación integre servicios de terceros, se informará al usuario cuáles son
+            en la documentación específica de esa aplicación o en el aviso de privacidad correspondiente.
+            ISMO Soft selecciona proveedores que cumplen con estándares reconocidos de protección de datos.
+          </p>
+
+          <h2 id="s10">10. Privacidad de menores</h2>
+          <p>
+            Nuestras aplicaciones no están dirigidas a menores de 13 años. No recopilamos de forma
+            intencional información personal de menores de esa edad. Si un padre o tutor detecta
+            que su hijo ha proporcionado datos personales, puede solicitar su eliminación contactándose
+            a <strong><a href="mailto:[email@ismosoft.com]">[email@ismosoft.com]</a></strong>.
+          </p>
+
+          <h2 id="s11">11. Cambios en esta política</h2>
+          <p>
+            Podemos actualizar esta política periódicamente. Cuando lo hagamos, actualizaremos la
+            fecha indicada al inicio del documento e informaremos a los usuarios a través de la
+            propia aplicación o por correo electrónico cuando el cambio sea significativo.
+          </p>
+          <p>El uso continuado de la aplicación implica la aceptación de la versión vigente.</p>
+
+          <h2 id="s12">12. Contacto</h2>
+          <p>Para consultas relacionadas con esta política o el tratamiento de datos personales:</p>
+          <p><strong>Correo electrónico:</strong> <a href="mailto:[email@ismosoft.com]">[email@ismosoft.com]</a></p>
+          <p><strong>Empresa:</strong> ISMO Soft — Argentina</p>
+
+          <div class="prose-footer">
+            Esta política ha sido redactada para cumplir con los requisitos de publicación de
+            Google Play Store, Apple App Store y la Ley 25.326 de Protección de los Datos
+            Personales de la República Argentina.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .privacy-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  /* Table of contents */
+  .toc {
+    position: sticky;
+    top: calc(var(--nav-height) + 2rem);
+  }
+
+  .toc__label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-2);
+    margin-bottom: 0.75rem;
+  }
+
+  .toc__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .toc__list li { list-style: none; }
+
+  .toc__link {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12.5px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s, background 0.15s;
+    line-height: 1.4;
+  }
+
+  .toc__link:hover {
+    color: var(--text-2);
+    background: var(--surface-raised);
+    opacity: 1;
+  }
+
+  .toc__num {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted-2);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Prose footer note */
+  .prose-footer {
+    margin-top: 3rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 900px) {
+    .privacy-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .toc {
+      position: static;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+    }
+  }
+</style>

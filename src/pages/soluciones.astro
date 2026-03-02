@@ -1,0 +1,289 @@
+---
+import Base from '../layouts/Base.astro';
+
+const benefits = [
+  {
+    num: '01',
+    title: 'Centralización de la información',
+    text: 'Un único punto de acceso para toda la información relevante: servicios, eventos, contactos, horarios, alertas. El ciudadano encuentra lo que necesita sin depender de canales no oficiales.',
+  },
+  {
+    num: '02',
+    title: 'Gestión autónoma del contenido',
+    text: 'El equipo municipal administra el contenido directamente desde un panel web sin intervención técnica externa. Esto reduce la dependencia de proveedores y mantiene la información vigente en tiempo real.',
+  },
+  {
+    num: '03',
+    title: 'Disponibilidad permanente',
+    text: 'Una aplicación móvil está disponible las 24 horas, los 7 días de la semana, desde cualquier dispositivo. No requiere personal de atención para responder consultas básicas.',
+  },
+  {
+    num: '04',
+    title: 'Datos para la toma de decisiones',
+    text: 'La plataforma registra métricas de uso: secciones más consultadas, horarios de mayor actividad, contenidos de mayor demanda. Datos que informan la planificación institucional.',
+  },
+  {
+    num: '05',
+    title: 'Proyección institucional',
+    text: 'Una aplicación municipal desarrollada con estándares profesionales mejora la imagen del gobierno local y demuestra capacidad de gestión ante organismos provinciales y de financiamiento.',
+  },
+];
+
+const steps = [
+  {
+    num: '01',
+    title: 'Diagnóstico y relevamiento',
+    desc: 'Analizamos el contexto local, los sistemas existentes y los objetivos del área. Definimos el alcance funcional del proyecto de forma conjunta.',
+  },
+  {
+    num: '02',
+    title: 'Propuesta técnica',
+    desc: 'Presentamos una propuesta detallada que incluye arquitectura, funcionalidades, cronograma y presupuesto. Sin compromisos previos.',
+  },
+  {
+    num: '03',
+    title: 'Desarrollo e iteración',
+    desc: 'Desarrollamos la solución en etapas con revisiones periódicas. El municipio puede validar el avance en cada instancia.',
+  },
+  {
+    num: '04',
+    title: 'Implementación y capacitación',
+    desc: 'Desplegamos la solución en producción y capacitamos al equipo responsable de su administración.',
+  },
+  {
+    num: '05',
+    title: 'Soporte continuo',
+    desc: 'Brindamos soporte técnico, actualizaciones y acompañamiento posterior a la puesta en marcha.',
+  },
+];
+---
+
+<Base
+  title="Soluciones para Gobiernos Locales"
+  description="ISMO Soft desarrolla soluciones tecnológicas adaptadas a las condiciones operativas y presupuestarias del sector público local."
+>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero__eyebrow">
+        <span class="badge">Sector público</span>
+      </div>
+      <h1 class="page-hero__title">Soluciones para gobiernos locales</h1>
+      <p class="page-hero__sub">
+        Los municipios enfrentan una creciente demanda de servicios digitales.
+        ISMO Soft desarrolla soluciones tecnológicas adaptadas a las condiciones
+        operativas y presupuestarias del sector público local.
+      </p>
+    </div>
+  </div>
+
+  <!-- El problema -->
+  <section class="section" style="background: var(--surface); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="problem-layout">
+        <div>
+          <span class="badge">El problema</span>
+          <h2 class="problem-title">Información fragmentada,<br />gestión ineficiente</h2>
+        </div>
+        <div class="problem-text">
+          <p>
+            La mayoría de las municipalidades gestiona información dispersa en
+            múltiples canales: redes sociales, sitios web desactualizados,
+            folletos impresos, llamadas telefónicas. Esta fragmentación genera
+            ineficiencia interna, desinformación ciudadana y pérdida de
+            oportunidades institucionales.
+          </p>
+          <p>
+            Una plataforma digital centralizada, mantenida por el propio
+            municipio, resuelve esta dispersión de forma estructurada y sostenible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="section">
+    <div class="container">
+      <div class="sh">
+        <span class="badge">Beneficios institucionales</span>
+        <h2 class="sh__title">Lo que una plataforma digital aporta al municipio</h2>
+        <p class="sh__sub">
+          Cinco beneficios concretos que impactan en la operación diaria del gobierno local.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        {benefits.map(b => (
+          <div class="benefit-card">
+            <span class="benefit-card__num">{b.num}</span>
+            <h3 class="benefit-card__title">{b.title}</h3>
+            <p class="benefit-card__text">{b.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section class="section" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="process-layout">
+        <div class="process-header">
+          <span class="badge">Metodología</span>
+          <h2 style="margin-top: 1rem;">¿Cómo trabajamos<br />con un municipio?</h2>
+        </div>
+        <div class="steps">
+          {steps.map(s => (
+            <div class="step">
+              <div class="step__num">{s.num}</div>
+              <div>
+                <p class="step__title">{s.title}</p>
+                <p class="step__desc">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container cta-row">
+      <div>
+        <h2 class="cta-row__title">¿Le interesa digitalizar su municipio?</h2>
+        <p class="cta-row__sub">Conversamos sin compromiso sobre los objetivos del proyecto.</p>
+      </div>
+      <a href="/contacto" class="btn btn--primary">Contactar al equipo</a>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .problem-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .problem-title {
+    margin-top: 1rem;
+    line-height: 1.2;
+  }
+
+  .problem-text p {
+    color: var(--muted);
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+
+  .problem-text p + p { margin-top: 1rem; }
+
+  /* Benefits */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .benefit-card {
+    background: var(--surface);
+    padding: 1.75rem;
+    transition: background 0.2s;
+  }
+
+  .benefit-card:hover {
+    background: var(--surface-raised);
+  }
+
+  /* Force last 2 cards to span correctly on 3-col grid */
+  .benefit-card:nth-child(4),
+  .benefit-card:nth-child(5) {
+    /* stays in flow */
+  }
+
+  .benefit-card__num {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent-light);
+    margin-bottom: 0.875rem;
+    text-transform: uppercase;
+  }
+
+  .benefit-card__title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .benefit-card__text {
+    color: var(--muted);
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  /* Process */
+  .process-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .process-header h2 {
+    font-size: 1.5rem;
+  }
+
+  /* CTA row */
+  .cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .cta-row__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .cta-row__sub {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 900px) {
+    .problem-layout,
+    .process-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

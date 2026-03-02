@@ -1,0 +1,128 @@
+---
+import Base from '../layouts/Base.astro';
+
+const services = [
+  {
+    num: '01',
+    title: 'Desarrollo de aplicaciones móviles (iOS y Android)',
+    desc: 'Desarrollamos aplicaciones multiplataforma para dispositivos iOS y Android. Cada desarrollo parte de un análisis funcional detallado y se construye con criterios de rendimiento, accesibilidad y escalabilidad.',
+    items: [
+      'Relevamiento y definición de requerimientos funcionales',
+      'Diseño de arquitectura de la aplicación',
+      'Desarrollo multiplataforma con frameworks como React Native o Flutter, con publicación en Google Play Store y Apple App Store',
+      'Pruebas de calidad (QA) funcional y de rendimiento',
+      'Gestión del proceso de publicación en ambos stores',
+      'Documentación técnica y de usuario',
+    ],
+  },
+  {
+    num: '02',
+    title: 'Plataformas de información para municipios',
+    desc: 'Diseñamos e implementamos plataformas digitales para la gestión y difusión de información municipal. Estas soluciones permiten al organismo administrar contenido de forma autónoma y al ciudadano acceder a información actualizada desde su dispositivo.',
+    items: [
+      'Aplicación móvil para el ciudadano (iOS / Android)',
+      'Panel de administración web para el equipo municipal',
+      'Gestión de puntos de interés, eventos, servicios y contenido local',
+      'Sistema de notificaciones y actualizaciones de contenido',
+      'Soporte técnico y actualizaciones',
+    ],
+  },
+  {
+    num: '03',
+    title: 'Integración de sistemas',
+    desc: 'Desarrollamos conectores e integraciones entre sistemas existentes, bases de datos y plataformas de terceros. Esta capacidad es particularmente relevante para municipalidades que ya cuentan con software de gestión y necesitan interoperabilidad entre herramientas.',
+    items: [
+      'Análisis de sistemas actuales y puntos de integración',
+      'Desarrollo de APIs y servicios de intercambio de datos',
+      'Integración con sistemas de gestión municipal (RRHH, catastro, servicios públicos)',
+      'Documentación de interfaces y protocolos',
+    ],
+  },
+  {
+    num: '04',
+    title: 'Modernización digital para municipios',
+    desc: 'Acompañamos a municipalidades en el proceso de digitalización de sus servicios y procesos internos. Este servicio contempla tanto el desarrollo de software como la definición de arquitectura digital y la capacitación del equipo técnico municipal.',
+    items: [
+      'Diagnóstico del estado actual de los sistemas municipales',
+      'Propuesta de arquitectura digital',
+      'Desarrollo progresivo de soluciones prioritarias',
+      'Transferencia de conocimiento al equipo técnico interno',
+      'Documentación técnica completa',
+    ],
+  },
+];
+---
+
+<Base
+  title="Servicios"
+  description="Servicios de ingeniería de software de ISMO Soft: aplicaciones móviles, plataformas digitales, integración de sistemas y modernización digital para municipios."
+>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero__eyebrow">
+        <span class="badge">Lo que ofrecemos</span>
+      </div>
+      <h1 class="page-hero__title">Servicios</h1>
+      <p class="page-hero__sub">
+        Ingeniería de software orientada al sector público. Soluciones
+        digitales sólidas, mantenibles y construidas con criterio técnico riguroso.
+      </p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      {services.map((s) => (
+        <article class="service-block">
+          <span class="service-block__num" aria-hidden="true">{s.num}</span>
+          <div>
+            <h2 class="service-block__title">{s.title}</h2>
+            <p class="service-block__desc">{s.desc}</p>
+            <p class="service-block__label">Incluye</p>
+            <ul class="service-block__list">
+              {s.items.map(item => <li>{item}</li>)}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container cta-row">
+      <div>
+        <h2 class="cta-row__title">¿Tiene un proyecto en mente?</h2>
+        <p class="cta-row__sub">Respondemos consultas técnicas e institucionales sin compromiso previo.</p>
+      </div>
+      <a href="/contacto" class="btn btn--primary">Solicitar propuesta</a>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .cta-row__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .cta-row__sub {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 640px) {
+    .cta-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
