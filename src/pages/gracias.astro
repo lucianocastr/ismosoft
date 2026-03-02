@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Consulta recibida"
+  description="Su consulta fue recibida correctamente. El equipo de ISMO Soft le responderá dentro de las 48 horas hábiles."
+>
+
+  <section class="thanks-section">
+    <div class="container thanks-inner">
+
+      <div class="thanks-icon" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+
+      <h1 class="thanks-title">Consulta recibida</h1>
+      <p class="thanks-sub">
+        Su mensaje fue enviado correctamente. El equipo de ISMO Soft
+        le responderá dentro de las <strong>48 horas hábiles</strong>.
+      </p>
+
+      <div class="thanks-actions">
+        <a href="/" class="btn btn--primary">Volver al inicio</a>
+        <a href="/servicios" class="btn btn--ghost">Ver servicios</a>
+      </div>
+
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .thanks-section {
+    min-height: calc(100vh - var(--nav-height) - 220px);
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+  }
+
+  .thanks-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .thanks-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #059669;
+    margin-bottom: 1.75rem;
+  }
+
+  .thanks-title {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+
+  .thanks-sub {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 44ch;
+    margin-bottom: 2.5rem;
+  }
+
+  .thanks-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>
