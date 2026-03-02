@@ -64,7 +64,16 @@ const topics = [
       <div class="form-panel">
         <h2 class="form-panel__title">Formulario de contacto</h2>
 
-        <form class="form" id="contactForm" novalidate>
+        <form
+          class="form"
+          id="contactForm"
+          action="https://formsubmit.co/contacto@ismosoft.com.ar"
+          method="POST"
+          novalidate
+        >
+          <input type="hidden" name="_subject" value="Nueva consulta desde ismosoft.com.ar">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
 
           <div class="form-row">
             <div class="form-group">
@@ -248,23 +257,16 @@ const topics = [
   const msg  = document.getElementById('formMsg');
 
   form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-
     const get = (name: string) =>
       (form.elements.namedItem(name) as HTMLInputElement | HTMLTextAreaElement)?.value.trim();
 
     if (!get('nombre') || !get('institucion') || !get('email') || !get('consulta')) {
+      e.preventDefault();
       if (msg) {
         msg.textContent = 'Por favor, complete todos los campos obligatorios.';
         msg.className = 'form-msg err';
       }
-      return;
     }
-
-    if (msg) {
-      msg.textContent = 'Consulta recibida. Le responderemos dentro de las 48 horas hábiles.';
-      msg.className = 'form-msg ok';
-    }
-    form.reset();
+    // Si la validación pasa, el form se envía normalmente a FormSubmit
   });
 </script>
