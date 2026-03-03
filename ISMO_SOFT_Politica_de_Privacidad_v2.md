@@ -200,7 +200,7 @@ Para ejercer cualquiera de estos derechos, el usuario deberá dirigir su solicit
 
 **Correo electrónico:** contacto@ismosoft.com.ar
 
-La solicitud deberá incluir: nombre completo, descripción precisa del derecho que desea ejercer y, en caso de ser necesario para identificar la cuenta, el correo electrónico asociado a la misma. ISMO SOFT responderá en un plazo máximo de **treinta (30) días hábiles** contados desde la recepción de la solicitud debidamente completada.
+La solicitud deberá incluir: nombre completo, descripción precisa del derecho que desea ejercer y, en caso de ser necesario para identificar la cuenta, el correo electrónico asociado a la misma. Los plazos de respuesta conforme a la Ley N.° 25.326 son: **diez (10) días corridos** para solicitudes de acceso a datos (Art. 14) y **cinco (5) días hábiles** para solicitudes de rectificación, supresión u oposición (Art. 16).
 
 ---
 
@@ -242,13 +242,13 @@ Con carácter excepcional, ISMO SOFT podrá conservar ciertos datos durante el p
 
 ### 10.5. Plazo de procesamiento
 
-La eliminación efectiva de la cuenta y los datos asociados se completará en un plazo máximo de **treinta (30) días hábiles** contados desde la recepción de la solicitud. El usuario recibirá confirmación por correo electrónico una vez completado el proceso.
+La eliminación efectiva de la cuenta y los datos asociados se completará en un plazo máximo de **cinco (5) días hábiles** desde la recepción de la solicitud, conforme al artículo 16 de la Ley N.° 25.326. El usuario recibirá confirmación por correo electrónico una vez completado el proceso.
 
 ---
 
 ## 11. POLÍTICA RESPECTO A MENORES DE EDAD
 
-Los servicios de ISMO SOFT, tanto el sitio web institucional como sus aplicaciones móviles, **no están dirigidos a menores de catorce (14) años**, conforme al artículo 12 de la Ley N.° 25.326 y las restricciones de edad aplicables en las plataformas de distribución de aplicaciones.
+Los servicios de ISMO SOFT, tanto el sitio web institucional como sus aplicaciones móviles, **no están dirigidos a menores de catorce (14) años**, en aplicación del principio de mayor protección al interés de los menores y conforme a las restricciones de edad establecidas por las plataformas de distribución de aplicaciones.
 
 ISMO SOFT no recopila intencionalmente datos personales de menores de 14 años. Si un padre, madre o tutor legal tomara conocimiento de que un menor bajo su guarda ha proporcionado datos personales a ISMO SOFT sin su consentimiento, deberá comunicarlo inmediatamente a **contacto@ismosoft.com.ar**, y ISMO SOFT procederá a eliminar dichos datos a la brevedad posible.
 
@@ -311,11 +311,11 @@ Para cualquier consulta, reclamo, ejercicio de derechos o solicitud relacionada 
 - **Sitio web:** https://ismosoft.com.ar
 - **Formulario de contacto:** disponible en https://ismosoft.com.ar/contacto
 
-ISMO SOFT se compromete a dar respuesta a toda consulta o solicitud en un plazo máximo de **treinta (30) días hábiles** desde su recepción.
+ISMO SOFT responde las solicitudes conforme a los plazos de la Ley N.° 25.326: **diez (10) días corridos** para solicitudes de acceso (Art. 14) y **cinco (5) días hábiles** para rectificación, supresión u oposición (Art. 16).
 
 Sin perjuicio de lo anterior, el usuario tiene derecho a presentar una denuncia o reclamo ante la **Dirección Nacional de Protección de Datos Personales (DNPDP)**, organismo de control competente en materia de protección de datos personales en la República Argentina, accesible en https://www.argentina.gob.ar/aaip/datospersonales.
 
 ---
 
 *© ISMO SOFT — Todos los derechos reservados.*
-*Política de Privacidad — Versión 2.0 — Vigente a partir del 1 de marzo de 2026.*
+*Política de Privacidad — Versión 2.0 — Vigente a partir del 2 de marzo de 2026.*
