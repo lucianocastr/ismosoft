@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 
 <Base
   title="Política de Privacidad"
-  description="Política de privacidad de ISMO Soft. Información sobre recopilación, uso y protección de datos personales en nuestras aplicaciones móviles."
+  description="Política de privacidad de ISMO Soft. Información sobre recopilación, uso y protección de datos personales en nuestro sitio web y aplicaciones móviles."
 >
 
   <div class="page-hero">
@@ -13,7 +13,7 @@ import Base from '../layouts/Base.astro';
         <span class="badge">Legal</span>
       </div>
       <h1 class="page-hero__title">Política de Privacidad</h1>
-      <p class="page-hero__sub">Última actualización: 2 de marzo de 2026</p>
+      <p class="page-hero__sub">Última actualización: 2 de marzo de 2026 — Versión 2.0</p>
     </div>
   </div>
 
@@ -27,16 +27,20 @@ import Base from '../layouts/Base.astro';
           <ol class="toc__list">
             {[
               'Identificación del responsable',
-              'Aplicación de esta política',
-              'Información que recopilamos',
-              'Finalidad del tratamiento',
-              'Compartición con terceros',
-              'Almacenamiento y seguridad',
-              'Conservación de los datos',
-              'Derechos del usuario',
+              'Ámbito de aplicación',
+              'Marco normativo aplicable',
+              'Datos en el sitio web',
+              'Datos en aplicaciones móviles',
+              'Conservación de datos',
               'Servicios de terceros',
+              'Transferencias internacionales',
+              'Derechos del usuario',
+              'Solicitud de eliminación',
               'Privacidad de menores',
-              'Cambios en esta política',
+              'Seguridad de los datos',
+              'Cookies y tecnologías similares',
+              'Enlaces a terceros',
+              'Actualizaciones de la política',
               'Contacto',
             ].map((item, i) => (
               <li>
@@ -52,146 +56,418 @@ import Base from '../layouts/Base.astro';
         <!-- Contenido -->
         <article class="prose">
           <p>
-            Esta Política de Privacidad describe cómo ISMO Soft ("la empresa", "nosotros")
-            recopila, utiliza, almacena y protege la información personal de los usuarios de
-            las aplicaciones móviles desarrolladas y publicadas por ISMO Soft.
+            La presente Política de Privacidad describe cómo ISMO Soft ("la empresa", "nosotros")
+            recopila, utiliza, almacena y protege la información personal de los usuarios del sitio
+            web institucional y de las aplicaciones móviles desarrolladas y publicadas por ISMO Soft.
           </p>
           <p>
-            Al utilizar cualquiera de nuestras aplicaciones, el usuario acepta las prácticas
-            descritas en este documento.
+            Al acceder al sitio web o utilizar cualquiera de nuestras aplicaciones, el usuario declara
+            haber leído, comprendido y aceptado los términos de la presente política. En caso de no
+            estar de acuerdo con sus disposiciones, el usuario deberá abstenerse de utilizar los
+            servicios descritos.
           </p>
 
           <h2 id="s1">1. Identificación del responsable</h2>
-          <p><strong>Empresa:</strong> ISMO Soft</p>
-          <p><strong>Correo de contacto para privacidad:</strong> <a href="mailto:contacto@ismosoft.com.ar">contacto@ismosoft.com.ar</a></p>
-          <p><strong>País de operación:</strong> Argentina</p>
-
-          <h2 id="s2">2. Aplicación de esta política</h2>
           <p>
-            Esta política aplica a todas las aplicaciones móviles publicadas por ISMO Soft en
-            Google Play Store y Apple App Store, así como a los servicios digitales asociados
-            a dichas aplicaciones (APIs, paneles de administración web, sistemas de notificaciones).
-          </p>
-
-          <h2 id="s3">3. Información que recopilamos</h2>
-          <p>Dependiendo de la aplicación específica, podemos recopilar los siguientes tipos de información:</p>
-
-          <h3>3.1 Información proporcionada por el usuario</h3>
-          <ul>
-            <li>Nombre y datos de contacto (cuando el usuario se registra o envía un formulario)</li>
-            <li>Correo electrónico (para autenticación o comunicaciones)</li>
-            <li>Preferencias de contenido seleccionadas dentro de la app</li>
-          </ul>
-
-          <h3>3.2 Información recopilada de forma automática</h3>
-          <ul>
-            <li>Datos de uso de la aplicación (secciones visitadas, funciones utilizadas, tiempo de sesión)</li>
-            <li>Información técnica del dispositivo (tipo de dispositivo, versión del sistema operativo, idioma configurado)</li>
-            <li>Dirección IP (registrada por los servidores durante solicitudes de red)</li>
-            <li>Identificadores de dispositivo anónimos (cuando se utilizan servicios de análisis o notificaciones push)</li>
-          </ul>
-
-          <h3>3.3 Datos de ubicación</h3>
-          <p>
-            Algunas aplicaciones pueden solicitar acceso a la ubicación geográfica del dispositivo
-            para ofrecer contenido o servicios cercanos al usuario. En todos los casos, este acceso
-            es <strong>opcional</strong> y el usuario puede negarlo o revocarlo desde la configuración
-            del sistema operativo sin que esto afecte el acceso a las funcionalidades principales.
-          </p>
-          <p>No almacenamos datos de ubicación de forma persistente sin consentimiento explícito del usuario.</p>
-
-          <h2 id="s4">4. Finalidad del tratamiento de datos</h2>
-          <p>Los datos recopilados se utilizan exclusivamente para los siguientes fines:</p>
-          <ul>
-            <li>Proveer las funcionalidades de la aplicación</li>
-            <li>Mejorar la experiencia de uso mediante análisis de comportamiento agregado y anónimo</li>
-            <li>Enviar notificaciones relevantes (si el usuario las habilitó)</li>
-            <li>Responder consultas enviadas a través de formularios de contacto</li>
-            <li>Cumplir obligaciones legales o requerimientos de organismos competentes</li>
-          </ul>
-          <p>No utilizamos los datos personales de los usuarios con fines comerciales, publicitarios ni para la venta a terceros.</p>
-
-          <h2 id="s5">5. Compartición de información con terceros</h2>
-          <p>ISMO Soft no vende, alquila ni transfiere información personal a terceros con fines propios.</p>
-          <p>Podemos compartir información con terceros únicamente en los siguientes casos:</p>
-          <ul>
-            <li><strong>Proveedores de servicios técnicos:</strong> plataformas de alojamiento (hosting), servicios de análisis de uso y servicios de envío de notificaciones push. Estos proveedores actúan bajo instrucción nuestra y están sujetos a sus propias políticas de privacidad.</li>
-            <li><strong>Requerimientos legales:</strong> cuando una autoridad competente lo solicite en el marco de la legislación argentina vigente.</li>
-            <li><strong>Municipalidades clientes:</strong> en aplicaciones desarrolladas para un municipio específico, los datos operativos pueden ser accedidos por el organismo contratante en el marco del contrato de prestación de servicios.</li>
-          </ul>
-
-          <h2 id="s6">6. Almacenamiento y seguridad de los datos</h2>
-          <p>Los datos son almacenados en servidores con medidas de seguridad técnicas y organizativas adecuadas para prevenir accesos no autorizados, pérdida o alteración de la información. Aplicamos:</p>
-          <ul>
-            <li>Transmisión de datos cifrada mediante HTTPS/TLS</li>
-            <li>Acceso restringido a bases de datos mediante control de permisos</li>
-            <li>Contraseñas y credenciales almacenadas con hash criptográfico</li>
-          </ul>
-          <p>En caso de detectar una brecha de seguridad que afecte datos personales, notificaremos a los usuarios afectados en los plazos que establezca la normativa vigente.</p>
-
-          <h2 id="s7">7. Conservación de los datos</h2>
-          <p>
-            Los datos personales se conservan mientras sea necesario para cumplir los fines
-            descritos en esta política o mientras el usuario mantenga una cuenta activa en la aplicación.
-          </p>
-          <p>
-            Una vez que el usuario solicita la eliminación de sus datos o cierra su cuenta,
-            procedemos a la eliminación o anonimización de su información personal en un plazo
-            razonable, salvo que la conservación sea requerida por obligaciones legales.
-          </p>
-
-          <h2 id="s8">8. Derechos del usuario</h2>
-          <p>
-            De conformidad con la Ley 25.326 de Protección de los Datos Personales de la
-            República Argentina, el usuario tiene derecho a:
+            <strong>ISMO Soft</strong> (en adelante, "ISMO Soft", "nosotros" o "la empresa") es el
+            responsable del tratamiento de los datos personales recopilados a través de su sitio web
+            institucional y de las aplicaciones móviles que desarrolla y publica bajo su nombre en las
+            tiendas oficiales Apple App Store y Google Play Store.
           </p>
           <ul>
-            <li><strong>Acceder</strong> a los datos personales que ISMO Soft conserva sobre él</li>
-            <li><strong>Rectificar</strong> datos inexactos o incompletos</li>
-            <li><strong>Solicitar la eliminación</strong> de sus datos personales (derecho al olvido), salvo obligaciones legales</li>
-            <li><strong>Oponerse</strong> al tratamiento de sus datos para determinadas finalidades</li>
-            <li><strong>Revocar el consentimiento</strong> otorgado, sin que ello afecte la licitud del tratamiento previo</li>
+            <li><strong>Denominación:</strong> ISMO Soft</li>
+            <li><strong>País de constitución:</strong> República Argentina</li>
+            <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:contacto@ismosoft.com.ar">contacto@ismosoft.com.ar</a></li>
+            <li><strong>Sitio web:</strong> <a href="https://ismosoft.com.ar">https://ismosoft.com.ar</a></li>
           </ul>
-          <p>Para ejercer cualquiera de estos derechos: <strong><a href="mailto:contacto@ismosoft.com.ar">contacto@ismosoft.com.ar</a></strong></p>
-          <p>Respondemos solicitudes en un plazo máximo de 30 días hábiles desde la recepción.</p>
 
-          <h2 id="s9">9. Uso de servicios de terceros</h2>
+          <h2 id="s2">2. Ámbito de aplicación</h2>
+          <p>La presente Política de Privacidad regula el tratamiento de datos personales en los siguientes entornos operados por ISMO Soft:</p>
           <p>
-            Nuestras aplicaciones pueden integrar servicios técnicos provistos por terceros para
-            funciones como alojamiento de datos, análisis de uso, autenticación o envío de
-            notificaciones. Cada uno de estos proveedores opera bajo su propia política de privacidad.
+            <strong>a) Sitio web institucional:</strong> <a href="https://ismosoft.com.ar">https://ismosoft.com.ar</a>,
+            incluyendo todos sus subdominios y páginas internas, utilizado como canal de presentación
+            empresarial, difusión de servicios y punto de contacto con clientes y potenciales usuarios.
           </p>
           <p>
-            Cuando una aplicación integre servicios de terceros, se informará al usuario cuáles son
-            en la documentación específica de esa aplicación o en el aviso de privacidad correspondiente.
-            ISMO Soft selecciona proveedores que cumplen con estándares reconocidos de protección de datos.
+            <strong>b) Aplicaciones móviles:</strong> Todas las aplicaciones desarrolladas, publicadas
+            y mantenidas por ISMO Soft disponibles en Apple App Store y Google Play Store, incluyendo
+            sin carácter limitativo la aplicación <strong>Ansenuza</strong> y cualquier otra aplicación
+            futura bajo la marca ISMO Soft.
           </p>
 
-          <h2 id="s10">10. Privacidad de menores</h2>
+          <h2 id="s3">3. Marco normativo aplicable</h2>
+          <p>El tratamiento de datos personales realizado por ISMO Soft se ajusta a las siguientes normativas:</p>
+          <ul>
+            <li><strong>Ley N.° 25.326</strong> de Protección de los Datos Personales de la República Argentina y sus normas reglamentarias, en particular el Decreto N.° 1558/2001.</li>
+            <li><strong>Disposiciones de la Dirección Nacional de Protección de Datos Personales (DNPDP).</strong></li>
+            <li><strong>Apple App Store Review Guidelines</strong>, sección 5.1 (Privacy), y en particular los requisitos de App Privacy Details de Apple.</li>
+            <li><strong>Google Play Developer Program Policies</strong>, sección User Data y requerimientos de la sección Data Safety de Google Play Console.</li>
+            <li>Demás normas sectoriales de protección de datos personales aplicables según la actividad desarrollada.</li>
+          </ul>
+
+          <h2 id="s4">4. Tratamiento de datos en el sitio web</h2>
+
+          <h3>4.1 Datos recopilados a través del sitio web</h3>
+          <p><strong>Datos proporcionados voluntariamente por el usuario:</strong></p>
+          <ul>
+            <li>Nombre y apellido.</li>
+            <li>Dirección de correo electrónico.</li>
+            <li>Organización o institución de pertenencia (cuando corresponda).</li>
+            <li>Cargo o función en la institución (campo opcional del formulario de contacto).</li>
+            <li>Mensaje o consulta libre ingresada en formularios de contacto.</li>
+          </ul>
+          <p><strong>Datos técnicos recopilados automáticamente:</strong></p>
+          <ul>
+            <li>Dirección IP del dispositivo de acceso.</li>
+            <li>Tipo y versión de navegador web.</li>
+            <li>Sistema operativo del dispositivo.</li>
+            <li>Páginas visitadas, orden de navegación y tiempo de permanencia.</li>
+            <li>Fecha y hora de acceso.</li>
+            <li>Dirección URL de referencia (sitio desde el que se accedió).</li>
+            <li>Registros de errores y eventos de sistema (logs).</li>
+          </ul>
+
+          <h3>4.2 Finalidad del tratamiento — sitio web</h3>
+          <p>Los datos recopilados en el sitio web se utilizan exclusivamente para:</p>
+          <ul>
+            <li>Responder consultas, solicitudes de información y propuestas de trabajo recibidas a través de formularios de contacto.</li>
+            <li>Gestionar comunicaciones comerciales con clientes actuales y potenciales, siempre con base en el consentimiento o relación precontractual.</li>
+            <li>Analizar el comportamiento de navegación de forma agregada y anonimizada a efectos de mejorar la usabilidad del sitio.</li>
+            <li>Garantizar la seguridad del sitio web, detectar accesos no autorizados y prevenir actividades fraudulentas.</li>
+            <li>Cumplir con obligaciones legales aplicables.</li>
+          </ul>
+
+          <h3>4.3 Base legal del tratamiento — sitio web</h3>
+          <ul>
+            <li><strong>Consentimiento del usuario:</strong> para el envío de formularios de contacto y comunicaciones opcionales.</li>
+            <li><strong>Interés legítimo:</strong> para el análisis estadístico de navegación y la seguridad del sitio.</li>
+            <li><strong>Cumplimiento de obligaciones legales:</strong> en los casos que la normativa vigente lo exija.</li>
+          </ul>
+
+          <h2 id="s5">5. Tratamiento de datos en aplicaciones móviles</h2>
+
+          <h3>5.1 Datos recopilados a través de las aplicaciones</h3>
+          <p><strong>Datos de cuenta e identidad (provistos por el usuario):</strong></p>
+          <ul>
+            <li>Nombre y apellido.</li>
+            <li>Dirección de correo electrónico (utilizada como identificador de cuenta).</li>
+            <li>Contraseña (almacenada exclusivamente en forma cifrada; ISMO Soft no accede a contraseñas en texto plano).</li>
+            <li>Número de teléfono (cuando la aplicación lo requiera para funcionalidades específicas).</li>
+            <li>Foto de perfil o avatar (cuando el usuario opte por cargarla).</li>
+            <li>Contenidos generados por el usuario (publicaciones, comentarios, imágenes u otro contenido ingresado voluntariamente en la aplicación).</li>
+          </ul>
+          <p><strong>Datos técnicos recopilados automáticamente:</strong></p>
+          <ul>
+            <li>Dirección IP del dispositivo.</li>
+            <li>Identificador de dispositivo (Device ID) en la forma en que la plataforma lo expone a la aplicación.</li>
+            <li>Tipo de dispositivo, modelo y fabricante.</li>
+            <li>Versión del sistema operativo (iOS / Android).</li>
+            <li>Versión de la aplicación instalada.</li>
+            <li>Registros de uso (secciones visitadas, funcionalidades utilizadas, tiempo de sesión).</li>
+            <li>Registros de errores y eventos de diagnóstico (crash reports).</li>
+            <li>Tokens de notificaciones push (cuando el usuario habilita las notificaciones).</li>
+          </ul>
+          <p><strong>Datos de localización:</strong></p>
           <p>
-            Nuestras aplicaciones no están dirigidas a menores de 13 años. No recopilamos de forma
-            intencional información personal de menores de esa edad. Si un padre o tutor detecta
-            que su hijo ha proporcionado datos personales, puede solicitar su eliminación contactándose
-            a <strong><a href="mailto:contacto@ismosoft.com.ar">contacto@ismosoft.com.ar</a></strong>.
+            Las aplicaciones de ISMO Soft únicamente acceden a la ubicación del dispositivo cuando la
+            funcionalidad específica lo requiere de forma esencial y el usuario otorga explícitamente
+            el permiso correspondiente a través del sistema operativo. Este acceso se declara en la
+            sección Data Safety de Google Play y en App Privacy Details de Apple App Store para cada aplicación.
           </p>
 
-          <h2 id="s11">11. Cambios en esta política</h2>
+          <h3>5.2 Finalidad del tratamiento — aplicaciones móviles</h3>
+          <ul>
+            <li>Crear, gestionar y autenticar la cuenta del usuario en la aplicación.</li>
+            <li>Proveer las funcionalidades centrales de la aplicación (publicación de contenido, visualización de información, interacción con otros usuarios según corresponda).</li>
+            <li>Enviar notificaciones push relevantes únicamente cuando el usuario haya habilitado dicho permiso.</li>
+            <li>Mejorar el rendimiento de la aplicación mediante análisis anonimizados de uso y diagnóstico de errores.</li>
+            <li>Brindar soporte técnico ante reportes o incidencias del usuario.</li>
+            <li>Garantizar la seguridad de la plataforma y prevenir usos fraudulentos o indebidos.</li>
+            <li>Cumplir con obligaciones legales y regulatorias aplicables.</li>
+          </ul>
+
+          <h3>5.3 Base legal del tratamiento — aplicaciones móviles</h3>
+          <ul>
+            <li><strong>Ejecución del contrato o relación de servicio:</strong> para proveer las funcionalidades de la aplicación a partir del momento en que el usuario crea su cuenta y acepta los términos de uso.</li>
+            <li><strong>Consentimiento explícito del usuario:</strong> para el envío de notificaciones push y acceso a ubicación o cámara, otorgado a través de los mecanismos del sistema operativo.</li>
+            <li><strong>Interés legítimo:</strong> para el diagnóstico técnico, la seguridad de la plataforma y el análisis agregado de uso.</li>
+            <li><strong>Cumplimiento de obligaciones legales:</strong> en los casos que la normativa vigente lo exija.</li>
+          </ul>
+
+          <h2 id="s6">6. Conservación de datos</h2>
+          <p>Los datos personales son conservados durante el tiempo estrictamente necesario para cumplir con las finalidades descritas en esta política, conforme a los siguientes criterios:</p>
+
+          <div class="data-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tipo de dato</th>
+                  <th>Período de conservación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Datos de cuenta activa</td>
+                  <td>Durante la vigencia de la cuenta del usuario</td>
+                </tr>
+                <tr>
+                  <td>Datos de formularios de contacto (sitio web)</td>
+                  <td>Hasta 24 meses desde la última interacción</td>
+                </tr>
+                <tr>
+                  <td>Registros técnicos y logs</td>
+                  <td>Hasta 12 meses desde su generación</td>
+                </tr>
+                <tr>
+                  <td>Datos de diagnóstico y errores</td>
+                  <td>Hasta 6 meses desde su generación</td>
+                </tr>
+                <tr>
+                  <td>Datos de cuenta eliminada</td>
+                  <td>Hasta 30 días hábiles post-eliminación, salvo obligación legal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Transcurridos estos plazos, los datos serán eliminados de forma segura o anonimizados irreversiblemente.</p>
+          <p>Cuando exista una obligación legal o regulatoria que imponga la conservación de datos por un plazo mayor, ISMO Soft dará cumplimiento a dicha obligación, limitando el acceso a los datos al mínimo necesario.</p>
+
+          <h2 id="s7">7. Servicios de terceros y encargados del tratamiento</h2>
           <p>
-            Podemos actualizar esta política periódicamente. Cuando lo hagamos, actualizaremos la
-            fecha indicada al inicio del documento e informaremos a los usuarios a través de la
-            propia aplicación o por correo electrónico cuando el cambio sea significativo.
+            ISMO Soft utiliza servicios de terceros que actúan como encargados del tratamiento de datos
+            en su nombre. Dichos servicios están contractualmente obligados a tratar los datos conforme
+            a instrucciones de ISMO Soft y a aplicar medidas de seguridad adecuadas.
           </p>
-          <p>El uso continuado de la aplicación implica la aceptación de la versión vigente.</p>
 
-          <h2 id="s12">12. Contacto</h2>
-          <p>Para consultas relacionadas con esta política o el tratamiento de datos personales:</p>
-          <p><strong>Correo electrónico:</strong> <a href="mailto:contacto@ismosoft.com.ar">contacto@ismosoft.com.ar</a></p>
-          <p><strong>Empresa:</strong> ISMO Soft — Argentina</p>
+          <h3>7.1 Supabase</h3>
+          <p>
+            Las aplicaciones móviles de ISMO Soft utilizan <strong>Supabase</strong> (Supabase Inc.,
+            Estados Unidos) como plataforma de base de datos, autenticación y almacenamiento. Los datos
+            de cuenta, contenidos de usuario y registros de actividad se almacenan en infraestructura
+            provista por Supabase, que opera bajo estándares de seguridad internacionales. Política de
+            privacidad: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.
+          </p>
+
+          <h3>7.2 Proveedores de infraestructura y hosting</h3>
+          <p>
+            El sitio web institucional y los servicios asociados se alojan en proveedores de
+            infraestructura en la nube que ofrecen garantías de seguridad técnica y organizativa.
+          </p>
+
+          <h3>7.3 Plataformas de distribución de aplicaciones</h3>
+          <p>
+            Las aplicaciones de ISMO Soft son distribuidas a través de <strong>Apple App Store</strong>
+            (Apple Inc.) y <strong>Google Play Store</strong> (Google LLC). Dichas plataformas pueden
+            recopilar datos de descarga y uso conforme a sus propias políticas de privacidad, cuya
+            gestión es independiente de ISMO Soft.
+          </p>
+
+          <h3>7.4 Servicios de diagnóstico y análisis</h3>
+          <p>
+            En caso de utilizar servicios de análisis de errores o métricas de uso, ISMO Soft se asegura
+            de que dichos servicios operen sobre datos anonimizados o seudonimizados y no compartan
+            información identificable con terceros.
+          </p>
+
+          <h3>7.5 FormSubmit</h3>
+          <p>
+            El formulario de contacto del sitio web institucional utiliza <strong>FormSubmit</strong>
+            (formsubmit.co) como servicio de procesamiento y envío de mensajes. Los datos ingresados
+            en el formulario (nombre, correo electrónico, institución, cargo y consulta) son transmitidos
+            a través de la infraestructura de FormSubmit con el único fin de entregar el mensaje al
+            correo institucional de ISMO Soft. Los datos no son almacenados por FormSubmit más allá
+            de lo estrictamente necesario para la entrega del mensaje.
+          </p>
+
+          <p><strong>ISMO Soft no vende, alquila, cede ni transfiere datos personales</strong> a terceros con fines comerciales, publicitarios o de cualquier otra naturaleza ajena a las finalidades declaradas en esta política.</p>
+
+          <h2 id="s8">8. Transferencias internacionales de datos</h2>
+          <p>
+            Dado que ISMO Soft utiliza proveedores tecnológicos como Supabase, cuyos servidores pueden
+            estar ubicados fuera de la República Argentina, los datos personales de los usuarios pueden
+            ser transferidos y almacenados en servidores situados en el exterior, incluyendo Estados Unidos.
+          </p>
+          <p>
+            Dichas transferencias se realizan conforme a lo establecido en el artículo 12 de la
+            Ley N.° 25.326 y las disposiciones de la DNPDP en materia de transferencias internacionales,
+            asegurando que el país o entidad destinataria proporcione niveles de protección adecuados
+            o que existan garantías contractuales suficientes.
+          </p>
+          <p>
+            Al utilizar los servicios de ISMO Soft, el usuario presta su consentimiento informado para
+            esta transferencia, en la medida en que la normativa argentina lo requiera.
+          </p>
+
+          <h2 id="s9">9. Derechos del usuario</h2>
+          <p>
+            De conformidad con la <strong>Ley N.° 25.326 de Protección de los Datos Personales</strong>,
+            toda persona cuyos datos sean tratados por ISMO Soft tiene derecho a:
+          </p>
+          <ul>
+            <li><strong>Acceso:</strong> Conocer qué datos personales son tratados, de qué fuente provienen y con qué finalidad.</li>
+            <li><strong>Rectificación:</strong> Solicitar la corrección de datos inexactos, incompletos o desactualizados.</li>
+            <li><strong>Supresión:</strong> Solicitar la eliminación de sus datos cuando no sean necesarios para las finalidades declaradas o cuando retire su consentimiento.</li>
+            <li><strong>Confidencialidad:</strong> Solicitar que sus datos no sean cedidos a terceros, salvo obligación legal.</li>
+            <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos cuando éste se base en el interés legítimo de ISMO Soft, invocando motivos fundados.</li>
+            <li><strong>Revocación del consentimiento:</strong> Retirar en cualquier momento el consentimiento prestado, sin que ello afecte la licitud del tratamiento realizado con anterioridad.</li>
+          </ul>
+          <p>
+            La DNPDP, en su carácter de Órgano de Control de la Ley N.° 25.326, tiene la atribución
+            de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de
+            las normas sobre protección de datos personales.
+          </p>
+          <p>Para ejercer cualquiera de estos derechos, el usuario deberá dirigir su solicitud a: <strong><a href="mailto:contacto@ismosoft.com.ar">contacto@ismosoft.com.ar</a></strong></p>
+          <p>La solicitud deberá incluir: nombre completo, descripción precisa del derecho que desea ejercer y, en caso de ser necesario para identificar la cuenta, el correo electrónico asociado. ISMO Soft responderá en un plazo máximo de <strong>treinta (30) días hábiles</strong> contados desde la recepción de la solicitud debidamente completada.</p>
+
+          <h2 id="s10">10. Solicitud de eliminación de datos y cuentas</h2>
+          <p>
+            ISMO Soft reconoce y garantiza el derecho del usuario a solicitar la eliminación completa
+            de su cuenta y la supresión de todos sus datos personales asociados, en cumplimiento de la
+            Ley N.° 25.326, las Apple App Store Review Guidelines (sección 5.1.1) y las Google Play
+            Developer Program Policies (sección User Data).
+          </p>
+
+          <h3>10.1 Eliminación desde la aplicación</h3>
+          <p>
+            Cuando la aplicación lo disponga, el usuario podrá iniciar el proceso de eliminación de
+            cuenta directamente desde la configuración de la aplicación, accediendo a la sección
+            <strong>Ajustes &gt; Cuenta &gt; Eliminar cuenta</strong> (o equivalente según la aplicación).
+          </p>
+
+          <h3>10.2 Eliminación por solicitud directa</h3>
+          <p>El usuario puede solicitar la eliminación en cualquier momento enviando un correo a:</p>
+          <p>
+            <strong><a href="mailto:contacto@ismosoft.com.ar">contacto@ismosoft.com.ar</a></strong><br/>
+            Asunto: <em>"Solicitud de eliminación de cuenta y datos personales"</em>
+          </p>
+          <p>El correo deberá incluir: nombre completo del titular, correo electrónico asociado a la cuenta, nombre de la aplicación y confirmación expresa de la voluntad de eliminar la cuenta y sus datos.</p>
+
+          <h3>10.3 Datos que serán eliminados</h3>
+          <p>Ante una solicitud de eliminación, ISMO Soft procederá a eliminar o anonimizar de forma permanente:</p>
+          <ul>
+            <li>Datos de perfil del usuario (nombre, correo electrónico, foto de perfil).</li>
+            <li>Publicaciones, contenidos y demás información ingresada por el usuario.</li>
+            <li>Historial de uso vinculado al identificador del usuario.</li>
+            <li>Tokens de autenticación y notificaciones activos.</li>
+          </ul>
+
+          <h3>10.4 Datos retenidos por obligación legal</h3>
+          <p>
+            Con carácter excepcional, ISMO Soft podrá conservar ciertos datos durante el período
+            legalmente obligatorio cuando así lo exija la normativa aplicable. En tales casos, el
+            usuario será informado de los datos conservados, su base legal y el plazo de retención.
+          </p>
+
+          <h3>10.5 Plazo de procesamiento</h3>
+          <p>
+            La eliminación efectiva de la cuenta y los datos asociados se completará en un plazo
+            máximo de <strong>treinta (30) días hábiles</strong> desde la recepción de la solicitud.
+            El usuario recibirá confirmación por correo electrónico una vez completado el proceso.
+          </p>
+
+          <h2 id="s11">11. Privacidad de menores</h2>
+          <p>
+            Los servicios de ISMO Soft, tanto el sitio web institucional como sus aplicaciones móviles,
+            <strong>no están dirigidos a menores de catorce (14) años</strong>, conforme al artículo 12
+            de la Ley N.° 25.326 y las restricciones de edad aplicables en las plataformas de
+            distribución de aplicaciones.
+          </p>
+          <p>
+            ISMO Soft no recopila intencionalmente datos personales de menores de 14 años. Si un padre,
+            madre o tutor legal tomara conocimiento de que un menor bajo su guarda ha proporcionado datos
+            personales a ISMO Soft sin su consentimiento, deberá comunicarlo inmediatamente a
+            <strong><a href="mailto:contacto@ismosoft.com.ar">contacto@ismosoft.com.ar</a></strong>,
+            y ISMO Soft procederá a eliminar dichos datos a la brevedad posible.
+          </p>
+          <p>
+            En el caso de aplicaciones que por su naturaleza puedan ser utilizadas por usuarios entre
+            14 y 17 años, se requerirá la aceptación de los términos por parte del padre, madre o tutor
+            legal, conforme a las pautas establecidas por Apple App Store y Google Play.
+          </p>
+          <p>
+            <em>Nota:</em> La edad mínima de 14 años, establecida por la Ley N.° 25.326, es más
+            restrictiva que el umbral de 13 años que aplican Apple App Store y Google Play conforme
+            a la normativa COPPA (EE.UU.). ISMO Soft aplica el criterio más protector en beneficio
+            de sus usuarios.
+          </p>
+
+          <h2 id="s12">12. Seguridad de los datos</h2>
+          <p>
+            ISMO Soft implementa medidas técnicas y organizativas adecuadas para garantizar la seguridad
+            de los datos personales tratados, protegerlos frente a accesos no autorizados, pérdida,
+            alteración, divulgación o destrucción, incluyendo:
+          </p>
+          <ul>
+            <li><strong>Cifrado en tránsito:</strong> Toda comunicación entre los dispositivos de los usuarios y los servidores de ISMO Soft se realiza mediante protocolos HTTPS/TLS.</li>
+            <li><strong>Cifrado en reposo:</strong> Los datos sensibles almacenados en base de datos son cifrados conforme a las capacidades provistas por Supabase y la infraestructura subyacente.</li>
+            <li><strong>Autenticación segura:</strong> Las contraseñas son almacenadas exclusivamente mediante funciones de hash criptográfico seguro. ISMO Soft no almacena ni tiene acceso a contraseñas en texto plano.</li>
+            <li><strong>Control de acceso:</strong> El acceso a los sistemas de producción y bases de datos está restringido al personal técnico autorizado, bajo principios de mínimo privilegio.</li>
+            <li><strong>Monitoreo y auditoría:</strong> ISMO Soft aplica mecanismos de monitoreo de actividad y revisión periódica de accesos para detectar comportamientos anómalos.</li>
+            <li><strong>Gestión de incidentes:</strong> En caso de producirse una brecha de seguridad que afecte datos personales, ISMO Soft notificará a las autoridades competentes y, cuando corresponda, a los usuarios afectados, en los plazos establecidos por la normativa aplicable.</li>
+          </ul>
+          <p>Pese a la aplicación de estas medidas, ningún sistema de transmisión o almacenamiento de datos puede garantizar seguridad absoluta.</p>
+
+          <h2 id="s13">13. Cookies y tecnologías similares</h2>
+          <p>
+            El sitio web de ISMO Soft puede utilizar cookies y tecnologías similares para mejorar
+            la experiencia de navegación del usuario y recopilar estadísticas de uso en forma agregada
+            y anonimizada.
+          </p>
+          <p>Las aplicaciones móviles no utilizan cookies de terceros con fines publicitarios ni de seguimiento comportamental entre aplicaciones.</p>
+          <p>
+            El usuario puede configurar su navegador web para rechazar o eliminar cookies. No obstante,
+            la desactivación de ciertas cookies puede afectar el funcionamiento correcto de algunas
+            secciones del sitio web.
+          </p>
+
+          <h2 id="s14">14. Enlaces a sitios y servicios de terceros</h2>
+          <p>
+            El sitio web de ISMO Soft o sus aplicaciones pueden contener enlaces o integraciones con
+            sitios web y servicios de terceros. ISMO Soft no es responsable por las prácticas de
+            privacidad de dichos terceros ni por los contenidos que publiquen. Se recomienda al usuario
+            revisar las políticas de privacidad de cada servicio externo al que acceda.
+          </p>
+
+          <h2 id="s15">15. Actualizaciones de esta política</h2>
+          <p>
+            ISMO Soft se reserva el derecho de actualizar o modificar la presente Política de Privacidad
+            en cualquier momento, a fin de reflejar cambios en sus prácticas, incorporar nuevas
+            funcionalidades a sus servicios, o dar cumplimiento a modificaciones normativas.
+          </p>
+          <p>Toda actualización relevante será comunicada a los usuarios mediante:</p>
+          <ul>
+            <li>Aviso destacado en el sitio web institucional y/o en la aplicación correspondiente.</li>
+            <li>Notificación a la dirección de correo electrónico registrada por el usuario, cuando ello resulte aplicable.</li>
+            <li>Actualización de la fecha de vigencia indicada en el encabezado de esta política.</li>
+          </ul>
+          <p>
+            El uso continuado del sitio web o de las aplicaciones de ISMO Soft con posterioridad a la
+            publicación de modificaciones implica la aceptación de la política actualizada. En caso de
+            cambios sustanciales que afecten derechos del usuario, se solicitará su consentimiento
+            explícito cuando corresponda.
+          </p>
+
+          <h2 id="s16">16. Contacto</h2>
+          <p>Para cualquier consulta, reclamo, ejercicio de derechos o solicitud relacionada con el tratamiento de datos personales por parte de ISMO Soft:</p>
+          <ul>
+            <li><strong>Correo electrónico:</strong> <a href="mailto:contacto@ismosoft.com.ar">contacto@ismosoft.com.ar</a></li>
+            <li><strong>Sitio web:</strong> <a href="https://ismosoft.com.ar">https://ismosoft.com.ar</a></li>
+            <li><strong>Formulario de contacto:</strong> <a href="/contacto">https://ismosoft.com.ar/contacto</a></li>
+          </ul>
+          <p>ISMO Soft se compromete a dar respuesta a toda consulta o solicitud en un plazo máximo de <strong>treinta (30) días hábiles</strong> desde su recepción.</p>
+          <p>
+            Sin perjuicio de lo anterior, el usuario tiene derecho a presentar una denuncia o reclamo
+            ante la <strong>Dirección Nacional de Protección de Datos Personales (DNPDP)</strong>,
+            organismo de control competente en materia de protección de datos personales en la
+            República Argentina, accesible en
+            <a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank" rel="noopener">www.argentina.gob.ar/aaip/datospersonales</a>.
+          </p>
 
           <div class="prose-footer">
             Esta política ha sido redactada para cumplir con los requisitos de publicación de
-            Google Play Store, Apple App Store y la Ley 25.326 de Protección de los Datos
-            Personales de la República Argentina.
+            Google Play Store, Apple App Store y la Ley N.° 25.326 de Protección de los Datos
+            Personales de la República Argentina. © ISMO Soft — Política de Privacidad v2.0 — Vigente desde el 2 de marzo de 2026.
           </div>
         </article>
 
@@ -257,6 +533,36 @@ import Base from '../layouts/Base.astro';
     color: var(--muted-2);
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
+  }
+
+  /* Data retention table */
+  .data-table {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  .data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.65rem 1rem;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+
+  .data-table th {
+    background: var(--surface);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-2);
+  }
+
+  .data-table tr:nth-child(even) td {
+    background: var(--surface);
   }
 
   /* Prose footer note */
